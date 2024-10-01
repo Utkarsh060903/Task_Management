@@ -18,11 +18,7 @@ const app = express()
 app.use(express.static('public'));
 
 app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"], // Include OPTIONS
-    credentials: true,
-  })
+  cors()
 );
 
 app.use(express.json())
