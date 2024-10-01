@@ -34,4 +34,8 @@ app.use("/api", routes)
 app.use(routeNotFound)
 app.use(errorHandler)
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
+
 app.listen(PORT, () => console.log(`Server listening on ${PORT}`))
