@@ -16,12 +16,12 @@ const PORT = process.env.PORT || 5000
 const app = express()
 
 app.use(
-    cors({
-        origin: ["https://task-management-1-oklj.onrender.com/"],
-        methods: ["GET", "POST", "DELETE", "PUT"],
-        credentials: true,
-    })
-)
+  cors({
+    origin: "https://task-management-1-oklj.onrender.com",
+    methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"], // Include OPTIONS
+    credentials: true,
+  })
+);
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
