@@ -17,7 +17,7 @@ const app = express()
 
 app.use(
     cors({
-        origin: ["http://localhost:5173", "http://localhost:5174"],
+        origin: ["https://task-management-1-oklj.onrender.com/"],
         methods: ["GET", "POST", "DELETE", "PUT"],
         credentials: true,
     })
